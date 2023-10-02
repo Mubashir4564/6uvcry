@@ -7,8 +7,18 @@
     <!-- Include the specific player script in the head -->
     <script src="https://cdn.jwplayer.com/libraries/SciNHiTD.js" type="text/javascript"></script>
     
-    <!-- Add CSS to set the corner radius -->
+    <!-- Add CSS to style the video container and center it -->
     <style>
+        /* Style for the video container */
+        #video-container {
+            background-color: white; /* Set background to white */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            height: 100vh; /* Full viewport height */
+        }
+        
+        /* Style for the video player */
         #video-html-element-id-1 {
             border-radius: 10px; /* Set the corner radius to 10px */
             overflow: hidden; /* Ensure the rounded corners are applied correctly */
@@ -17,7 +27,9 @@
 </head>
 <body>
 
-<div id="video-html-element-id-1"></div>
+<div id="video-container">
+    <div id="video-html-element-id-1"></div>
+</div>
 <script async="">
   // Initialize the jwplayer script by passing the ID of the div where you want the player to appear
   jwplayer('video-html-element-id-1').setup({
